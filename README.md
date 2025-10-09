@@ -1,4 +1,5 @@
 # shouzhangbo的博客
+### <a href="ai">AI工具集合</a>
 ### <a href="index_show.html">我的工作室(承接各种软件开发、网站开发、APP、小程序开发等)</a>
 ### <a href="interview_simple">面试题-java基础</a>
 ### <a href="current">面试题-并发编程</a>
