@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
-title: shouzhangbo's homepage
+title: 一枚后端攻城狮的网站
 description: Bookmark this to keep an eye on my project updates!
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-architect
