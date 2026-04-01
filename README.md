@@ -1,5 +1,6 @@
 # 一枚后端攻城狮的网站
 ### <a href="ai">我的AI工具集合</a>
+### <a href="terminal_workflow_is_back">终端工作流正在重新赢回主场</a>
 ### <a href="interview_simple">面试题集合</a>
 ### <a href="mysql">我的工具</a>
 ### <a href="index_show.html">我的工作室(承接各种软件开发、网站开发、APP、小程序开发等)</a>
