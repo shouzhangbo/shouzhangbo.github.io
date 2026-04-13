@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-03-24T09:00:00.000Z" agent="CatDesk" version="21.0.0" type="device">
+  <diagram name="外卖平台业务架构图" id="waimai-arch">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ============================================================ -->
+        <!-- 标题 -->
+        <!-- ============================================================ -->
+        <mxCell id="title" value="外卖平台业务架构图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="427" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="分层架构 · 三端协同 · 数据驱动" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="427" y="58" width="800" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 层级标签（左侧） -->
+        <!-- ============================================================ -->
+        <mxCell id="label-l1" value="第一层&#xa;接入层" style="text;html=1;strokeColor=#cccccc;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#333333;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="80" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="label-l2" value="第二层&#xa;核心业务域" style="text;html=1;strokeColor=#cccccc;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#333333;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="290" width="80" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="label-l3" value="第三层&#xa;平台能力域" style="text;html=1;strokeColor=#cccccc;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#333333;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="620" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="label-l4" value="第四层&#xa;数据智能域" style="text;html=1;strokeColor=#cccccc;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#333333;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="770" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="label-l5" value="第五层&#xa;基础设施层" style="text;html=1;strokeColor=#cccccc;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#333333;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="920" width="80" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 第一层：接入层背景 -->
+        <!-- ============================================================ -->
+        <mxCell id="bg-l1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#2E86C1;strokeWidth=2;arcSize=5;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="1514" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l1-label" value="第一层：接入层（三端入口）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#2E86C1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="95" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- C端 子区域 -->
+        <mxCell id="bg-c" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#2E86C1;strokeWidth=1.5;arcSize=8;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="140" y="120" width="440" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c-title" value="👤 用户侧（C端）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1A5276;" vertex="1" parent="1">
+          <mxGeometry x="140" y="122" width="440" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="📱 消费者 App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="155" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="🏢 企业团餐" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="300" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="🌐 Web 端" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="445" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- B端 子区域 -->
+        <mxCell id="bg-b" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#1E8449;strokeWidth=1.5;arcSize=8;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="620" y="120" width="440" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="b-title" value="🏪 商家侧（B端）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E8449;" vertex="1" parent="1">
+          <mxGeometry x="620" y="122" width="440" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="📲 商家 App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#145A32;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="635" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="🖥️ 商家后台" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#145A32;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="780" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="🔗 POS 系统对接" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E8449;strokeColor=#145A32;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="925" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- D端 子区域 -->
+        <mxCell id="bg-d" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#D35400;strokeWidth=1.5;arcSize=8;opacity=60;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="120" width="520" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="d-title" value="🛵 骑手侧（D端）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#D35400;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="122" width="520" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="📱 骑手 App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D35400;strokeColor=#A04000;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="🚴 众包骑手" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D35400;strokeColor=#A04000;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="🏍️ 专送骑手" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D35400;strokeColor=#A04000;fontColor=#ffffff;fontSize=12;fontStyle=1;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1415" y="152" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 第二层：核心业务域背景 -->
+        <!-- ============================================================ -->
+        <mxCell id="bg-l2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#D4AC0D;strokeWidth=2;arcSize=5;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="120" y="290" width="1514" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l2-label" value="第二层：核心业务域" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#D4AC0D;" vertex="1" parent="1">
+          <mxGeometry x="130" y="295" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 交易域 -->
+        <mxCell id="bg-trade" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#F39C12;strokeWidth=1.5;arcSize=8;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="140" y="320" width="340" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="trade-title" value="🛒 交易域" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#E67E22;" vertex="1" parent="1">
+          <mxGeometry x="140" y="322" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="🔍 搜索 / 推荐" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="155" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="🛒 购物车" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="315" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="📋 下单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="155" y="415" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="💳 支付" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="315" y="415" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" value="📦 订单全生命周期管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="155" y="480" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" value="⭐ 评价体系" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="155" y="545" width="300" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- 配送域 -->
+        <mxCell id="bg-delivery" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#E74C3C;strokeWidth=1.5;arcSize=8;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="510" y="320" width="340" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="delivery-title" value="🚚 配送域" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#C0392B;" vertex="1" parent="1">
+          <mxGeometry x="510" y="322" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="de1" value="🤖 智能调度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="525" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="de2" value="🗺️ 路径规划" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="685" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="de3" value="📍 实时追踪" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="525" y="415" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="de4" value="⚠️ 配送异常处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="685" y="415" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="de5" value="🏃 运力调度（专送 / 众包）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="525" y="480" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="de6" value="⏱️ 准时奖判责" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="525" y="545" width="300" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- 商家域 -->
+        <mxCell id="bg-merchant" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAFAF1;strokeColor=#27AE60;strokeWidth=1.5;arcSize=8;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="880" y="320" width="340" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="merchant-title" value="🏪 商家域" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1E8449;" vertex="1" parent="1">
+          <mxGeometry x="880" y="322" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="🏬 店铺管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="895" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="🍜 菜单管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1055" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="🕐 营业管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="895" y="415" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="💰 商家结算" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1055" y="415" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" value="📊 商家经营分析" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="895" y="480" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m6" value="🎯 营销活动管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="895" y="545" width="300" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- 骑手域 -->
+        <mxCell id="bg-rider" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF5E7;strokeColor=#E67E22;strokeWidth=1.5;arcSize=8;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="320" width="370" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rider-title" value="🛵 骑手域" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#D35400;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="322" width="370" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="📝 骑手招募认证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="350" width="155" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="📬 接单 / 派单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1445" y="350" width="155" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="💵 骑手结算" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="415" width="155" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="🏆 绩效管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1445" y="415" width="155" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="💰 定价与收入展示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="480" width="335" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" value="🎁 补贴 / 奖励管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="545" width="335" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 第三层：平台能力域 -->
+        <!-- ============================================================ -->
+        <mxCell id="bg-l3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECF7;strokeColor=#8E44AD;strokeWidth=2;arcSize=5;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="120" y="620" width="1514" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l3-label" value="第三层：平台能力域（横向复用）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#8E44AD;" vertex="1" parent="1">
+          <mxGeometry x="130" y="625" width="350" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="👤 用户中心&#xa;账号 / 认证 / 权限" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="140" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="🎁 营销中心&#xa;优惠券 / 满减 / 红包" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="360" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="🛡️ 风控系统&#xa;反欺诈 / 安全" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="580" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="🎧 客服系统&#xa;在线客服 / 退款申诉" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="800" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="🔔 消息通知&#xa;Push / 短信 / 站内信" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" value="💰 定价与计费&#xa;C端配送费 / D端收入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="650" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p7" value="🧾 结算系统&#xa;商家结算 / 骑手结算" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="650" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 第四层：数据智能域 -->
+        <!-- ============================================================ -->
+        <mxCell id="bg-l4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#1ABC9C;strokeWidth=2;arcSize=5;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="120" y="770" width="1514" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l4-label" value="第四层：数据智能域（AI 驱动）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1ABC9C;" vertex="1" parent="1">
+          <mxGeometry x="130" y="775" width="350" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ai1" value="🎯 个性化推荐&#xa;猜你喜欢 / 千人千面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="140" y="800" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai2" value="💲 智能定价&#xa;动态定价 / 算法干预" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="390" y="800" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai3" value="📈 需求预测&#xa;备货 / 运力调配" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="640" y="800" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai4" value="📊 数据分析平台&#xa;经营报表 / 效果评估" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="890" y="800" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai5" value="🔍 搜索算法&#xa;相关性 / 排序优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="800" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ai6" value="🤖 调度算法&#xa;智能派单 / 路径优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ABC9C;strokeColor=#148F77;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="800" width="230" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 第五层：基础设施层 -->
+        <!-- ============================================================ -->
+        <mxCell id="bg-l5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F3F4;strokeColor=#566573;strokeWidth=2;arcSize=5;opacity=30;" vertex="1" parent="1">
+          <mxGeometry x="120" y="920" width="1514" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l5-label" value="第五层：基础设施层（技术底座）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#566573;" vertex="1" parent="1">
+          <mxGeometry x="130" y="925" width="350" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="i1" value="⚙️ 微服务架构&#xa;Spring Boot / Thrift RPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="140" y="950" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i2" value="🗄️ 分布式存储&#xa;分库分表 / 主从复制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="370" y="950" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i3" value="📨 消息队列&#xa;Mafka / 异步解耦" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="950" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i4" value="🗺️ 地图 / LBS 服务&#xa;位置 / 路径 / 距离" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="830" y="950" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i5" value="💳 支付网关&#xa;微信 / 支付宝 / 银行卡" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="950" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i6" value="⚡ 缓存 Squirrel&#xa;高频数据 / 定价规则" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="950" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="i7" value="🌍 多区域部署&#xa;HK / SA / GCC / MEGA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#ffffff;fontSize=11;arcSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="950" width="100" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 层间连接箭头（垂直方向） -->
+        <!-- ============================================================ -->
+        <!-- L1 → L2 -->
+        <mxCell id="arrow-l1-l2" value="请求 / 操作" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#2E86C1;strokeWidth=2;fillColor=#2E86C1;fontSize=10;fontColor=#2E86C1;" edge="1" parent="1" source="bg-l1" target="bg-l2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- L2 → L3 -->
+        <mxCell id="arrow-l2-l3" value="调用平台能力" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#D4AC0D;strokeWidth=2;fillColor=#D4AC0D;fontSize=10;fontColor=#D4AC0D;" edge="1" parent="1" source="bg-l2" target="bg-l3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- L3 ↔ L4 双向 -->
+        <mxCell id="arrow-l3-l4" value="数据反哺 / 能力调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#8E44AD;strokeWidth=2;fillColor=#8E44AD;fontSize=10;fontColor=#8E44AD;endArrow=block;startArrow=block;startFill=1;endFill=1;" edge="1" parent="1" source="bg-l3" target="bg-l4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- L4 → L5 -->
+        <mxCell id="arrow-l4-l5" value="依赖基础设施" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#1ABC9C;strokeWidth=2;fillColor=#1ABC9C;fontSize=10;fontColor=#1ABC9C;" edge="1" parent="1" source="bg-l4" target="bg-l5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- 图例 -->
+        <!-- ============================================================ -->
+        <mxCell id="legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#BDC3C7;strokeWidth=1;arcSize=5;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1065" width="1514" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="图例说明：" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="135" y="1075" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="第一层：接入层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#2E86C1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1080" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="第二层：核心业务域" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#D4AC0D;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="410" y="1080" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="第三层：平台能力域" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECF7;strokeColor=#8E44AD;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1080" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" value="第四层：数据智能域" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#1ABC9C;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1080" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg5" value="第五层：基础设施层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F3F4;strokeColor=#566573;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1080" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg6" value="↕ 双向数据流（智能反哺）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#8E44AD;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="1080" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg7" value="→ 单向调用关系" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#566573;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="1080" width="160" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ================================================================== -->
+  <!-- 第二页：DDD 技术架构图                                               -->
+  <!-- ================================================================== -->
+  <diagram name="DDD技术架构图" id="waimai-ddd">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="d0" />
+        <mxCell id="d1" parent="d0" />
+
+        <!-- 标题 -->
+        <mxCell id="d-title" value="外卖平台 DDD 技术架构图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="d1">
+          <mxGeometry x="377" y="15" width="900" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="d-subtitle" value="领域驱动设计（DDD）· 限界上下文 · 六边形架构 · 聚合根 · 领域事件" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#666666;" vertex="1" parent="d1">
+          <mxGeometry x="377" y="52" width="900" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 左侧：DDD 四层架构说明标签                                        -->
+        <!-- ================================================================ -->
+        <mxCell id="d-lbl-ui" value="用户接口层&#xa;(Interface)" style="text;html=1;strokeColor=#AEB6BF;fillColor=#F2F3F4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;fontColor=#333;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="15" y="90" width="75" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d-lbl-app" value="应用层&#xa;(Application)" style="text;html=1;strokeColor=#AEB6BF;fillColor=#F2F3F4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;fontColor=#333;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="15" y="185" width="75" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d-lbl-domain" value="领域层&#xa;(Domain)" style="text;html=1;strokeColor=#AEB6BF;fillColor=#FEF9E7;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;fontColor=#B7950B;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="15" y="285" width="75" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="d-lbl-infra" value="基础设施层&#xa;(Infrastructure)" style="text;html=1;strokeColor=#AEB6BF;fillColor=#F2F3F4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;fontStyle=1;fontColor=#333;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="15" y="740" width="75" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 用户接口层背景                                                    -->
+        <!-- ================================================================ -->
+        <mxCell id="d-bg-ui" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#2E86C1;strokeWidth=2;arcSize=3;opacity=25;" vertex="1" parent="d1">
+          <mxGeometry x="100" y="80" width="1540" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bg-ui-lbl" value="用户接口层 — REST API / Thrift RPC / MQ Consumer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#2E86C1;" vertex="1" parent="d1">
+          <mxGeometry x="110" y="83" width="600" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d-ui1" value="REST Controller&#xa;(C端 API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="120" y="108" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-ui2" value="Thrift Service&#xa;(内部 RPC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="300" y="108" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-ui3" value="MQ Consumer&#xa;(Mafka 消费者)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="480" y="108" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-ui4" value="定时任务&#xa;(Crane Job)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="660" y="108" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-ui5" value="GraphQL / BFF&#xa;(聚合网关)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E86C1;strokeColor=#1A5276;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="108" width="160" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 应用层背景                                                        -->
+        <!-- ================================================================ -->
+        <mxCell id="d-bg-app" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECF7;strokeColor=#8E44AD;strokeWidth=2;arcSize=3;opacity=25;" vertex="1" parent="d1">
+          <mxGeometry x="100" y="175" width="1540" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bg-app-lbl" value="应用层 — 用例编排 / 事务协调 / DTO 转换（不含业务规则）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#8E44AD;" vertex="1" parent="d1">
+          <mxGeometry x="110" y="178" width="700" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d-app1" value="OrderAppService&#xa;下单用例编排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="120" y="202" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="d-app2" value="DeliveryAppService&#xa;配送用例编排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="300" y="202" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="d-app3" value="PricingAppService&#xa;定价用例编排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="480" y="202" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="d-app4" value="SettlementAppService&#xa;结算用例编排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="660" y="202" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="d-app5" value="MerchantAppService&#xa;商家用例编排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="202" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="d-app6" value="RiderAppService&#xa;骑手用例编排" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="1020" y="202" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 领域层背景（最核心）                                              -->
+        <!-- ================================================================ -->
+        <mxCell id="d-bg-domain" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#F9A825;strokeWidth=2.5;arcSize=3;opacity=30;" vertex="1" parent="d1">
+          <mxGeometry x="100" y="280" width="1540" height="445" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bg-domain-lbl" value="领域层（Domain Layer）— 业务核心，包含限界上下文、聚合根、领域服务、领域事件、值对象" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#E65100;" vertex="1" parent="d1">
+          <mxGeometry x="110" y="283" width="900" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- BC1: 交易限界上下文 -->
+        <mxCell id="d-bc1-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F39C12;strokeWidth=2;arcSize=5;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="115" y="308" width="340" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc1-title" value="🛒 交易限界上下文&#xa;(Order BC)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#E67E22;" vertex="1" parent="d1">
+          <mxGeometry x="115" y="310" width="340" height="28" as="geometry" />
+        </mxCell>
+        <!-- 聚合根 -->
+        <mxCell id="d-bc1-ar" value="📦 Order（聚合根）&#xa;orderId / status / items&#xa;totalAmount / userId" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#fff;fontSize=11;arcSize=10;fontStyle=1;" vertex="1" parent="d1">
+          <mxGeometry x="130" y="345" width="310" height="65" as="geometry" />
+        </mxCell>
+        <!-- 实体 -->
+        <mxCell id="d-bc1-e1" value="OrderItem（实体）&#xa;skuId / quantity / price" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD7A0;strokeColor=#F39C12;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="130" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc1-e2" value="Payment（实体）&#xa;paymentId / method / status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD7A0;strokeColor=#F39C12;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="295" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <!-- 值对象 -->
+        <mxCell id="d-bc1-vo1" value="Money（值对象）&#xa;amount / currency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#E59866;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="130" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc1-vo2" value="Address（值对象）&#xa;city / district / detail" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#E59866;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="295" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <!-- 领域服务 -->
+        <mxCell id="d-bc1-ds" value="⚙️ OrderDomainService&#xa;下单规则 / 库存校验 / 优惠计算" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8C471;strokeColor=#F39C12;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="130" y="550" width="310" height="45" as="geometry" />
+        </mxCell>
+        <!-- 领域事件 -->
+        <mxCell id="d-bc1-de" value="📢 OrderCreatedEvent&#xa;OrderPaidEvent / OrderCancelledEvent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#F39C12;fontColor=#E67E22;fontSize=10;arcSize=10;dashed=1;fontStyle=2;" vertex="1" parent="d1">
+          <mxGeometry x="130" y="610" width="310" height="45" as="geometry" />
+        </mxCell>
+        <!-- 仓储接口 -->
+        <mxCell id="d-bc1-repo" value="🗃️ IOrderRepository（仓储接口）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5D8DC;strokeColor=#717D7E;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="130" y="668" width="310" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- BC2: 配送限界上下文 -->
+        <mxCell id="d-bc2-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEDEC;strokeColor=#E74C3C;strokeWidth=2;arcSize=5;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="470" y="308" width="340" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-title" value="🚚 配送限界上下文&#xa;(Delivery BC)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#C0392B;" vertex="1" parent="d1">
+          <mxGeometry x="470" y="310" width="340" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-ar" value="🏍️ DeliveryTask（聚合根）&#xa;taskId / status / riderId&#xa;pickupTime / deliverTime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#fff;fontSize=11;arcSize=10;fontStyle=1;" vertex="1" parent="d1">
+          <mxGeometry x="485" y="345" width="310" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-e1" value="Route（实体）&#xa;waypoints / distance / eta" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FADBD8;strokeColor=#E74C3C;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="485" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-e2" value="Dispatch（实体）&#xa;dispatchId / algorithm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FADBD8;strokeColor=#E74C3C;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="650" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-vo1" value="Location（值对象）&#xa;lat / lng / accuracy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#E74C3C;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="485" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-vo2" value="TimeWindow（值对象）&#xa;startTime / endTime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#E74C3C;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="650" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-ds" value="⚙️ DispatchDomainService&#xa;智能派单 / 路径规划 / 准时奖判责" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1948A;strokeColor=#E74C3C;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="485" y="550" width="310" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-de" value="📢 TaskAssignedEvent&#xa;TaskPickedUpEvent / TaskCompletedEvent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#E74C3C;fontColor=#C0392B;fontSize=10;arcSize=10;dashed=1;fontStyle=2;" vertex="1" parent="d1">
+          <mxGeometry x="485" y="610" width="310" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc2-repo" value="🗃️ IDeliveryTaskRepository（仓储接口）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5D8DC;strokeColor=#717D7E;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="485" y="668" width="310" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- BC3: 定价限界上下文 -->
+        <mxCell id="d-bc3-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF2FF;strokeColor=#2980B9;strokeWidth=2;arcSize=5;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="825" y="308" width="340" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-title" value="💰 定价限界上下文&#xa;(Pricing BC)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1A5276;" vertex="1" parent="d1">
+          <mxGeometry x="825" y="310" width="340" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-ar" value="💲 PricingPlan（聚合根）&#xa;planId / region / feeItems&#xa;effectiveTime / status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2980B9;strokeColor=#1A5276;fontColor=#fff;fontSize=11;arcSize=10;fontStyle=1;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="345" width="310" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-e1" value="FeeItem（实体）&#xa;type / formula / amount" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#AED6F1;strokeColor=#2980B9;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-e2" value="Subsidy（实体）&#xa;subsidyId / condition / amount" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#AED6F1;strokeColor=#2980B9;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="1005" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-vo1" value="PriceResult（值对象）&#xa;cFee / dIncome / breakdown" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#2980B9;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-vo2" value="Region（值对象）&#xa;country / city / zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF5FB;strokeColor=#2980B9;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1005" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-ds" value="⚙️ PricingDomainService&#xa;工程定价 / 算法定价 / 灰度路由" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7FB3D3;strokeColor=#2980B9;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="550" width="310" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-de" value="📢 PriceCalculatedEvent&#xa;PriceLockedEvent / SubsidyAppliedEvent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#2980B9;fontColor=#1A5276;fontSize=10;arcSize=10;dashed=1;fontStyle=2;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="610" width="310" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc3-repo" value="🗃️ IPricingPlanRepository（仓储接口）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5D8DC;strokeColor=#717D7E;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="840" y="668" width="310" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- BC4: 结算限界上下文 -->
+        <mxCell id="d-bc4-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAFAF1;strokeColor=#27AE60;strokeWidth=2;arcSize=5;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1180" y="308" width="340" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-title" value="🧾 结算限界上下文&#xa;(Settlement BC)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1E8449;" vertex="1" parent="d1">
+          <mxGeometry x="1180" y="310" width="340" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-ar" value="💵 SettlementBill（聚合根）&#xa;billId / riderId / period&#xa;totalIncome / status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;fontColor=#fff;fontSize=11;arcSize=10;fontStyle=1;" vertex="1" parent="d1">
+          <mxGeometry x="1195" y="345" width="310" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-e1" value="IncomeRecord（实体）&#xa;taskId / amount / type" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A9DFBF;strokeColor=#27AE60;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="1195" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-e2" value="Voucher（实体）&#xa;voucherId / amount / expiry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A9DFBF;strokeColor=#27AE60;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="1360" y="425" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-vo1" value="AccountPeriod（值对象）&#xa;startDate / endDate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAFAF1;strokeColor=#27AE60;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1195" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-vo2" value="Money（值对象）&#xa;amount / currency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAFAF1;strokeColor=#27AE60;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1360" y="490" width="145" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-ds" value="⚙️ SettlementDomainService&#xa;账期计算 / 收入汇总 / 结算推送" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#58D68D;strokeColor=#27AE60;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="1195" y="550" width="310" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-de" value="📢 BillGeneratedEvent&#xa;SettlementPushedEvent / VoucherIssuedEvent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#27AE60;fontColor=#1E8449;fontSize=10;arcSize=10;dashed=1;fontStyle=2;" vertex="1" parent="d1">
+          <mxGeometry x="1195" y="610" width="310" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bc4-repo" value="🗃️ ISettlementBillRepository（仓储接口）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5D8DC;strokeColor=#717D7E;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1195" y="668" width="310" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 基础设施层背景                                                    -->
+        <!-- ================================================================ -->
+        <mxCell id="d-bg-infra" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F3F4;strokeColor=#566573;strokeWidth=2;arcSize=3;opacity=30;" vertex="1" parent="d1">
+          <mxGeometry x="100" y="730" width="1540" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="d-bg-infra-lbl" value="基础设施层 — 仓储实现 / 消息发布 / 外部服务适配（依赖倒置：实现领域层定义的接口）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#566573;" vertex="1" parent="d1">
+          <mxGeometry x="110" y="733" width="900" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d-infra1" value="OrderRepositoryImpl&#xa;(MyBatis + 分库分表)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="115" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-infra2" value="DeliveryRepositoryImpl&#xa;(MyBatis + Squirrel缓存)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="330" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-infra3" value="DomainEventPublisher&#xa;(Mafka 消息队列)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="545" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-infra4" value="LbsServiceAdapter&#xa;(地图 / 路径 / 位置)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="760" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-infra5" value="PaymentGatewayAdapter&#xa;(微信 / 支付宝)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="975" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-infra6" value="PricingRepositoryImpl&#xa;(Squirrel缓存 + DB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="1190" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-infra7" value="SettlementRepositoryImpl&#xa;(周期库 + 分片库)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#566573;strokeColor=#2C3E50;fontColor=#fff;fontSize=11;arcSize=15;" vertex="1" parent="d1">
+          <mxGeometry x="1405" y="758" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 限界上下文间的协作关系（防腐层 / 事件驱动）                       -->
+        <!-- ================================================================ -->
+
+        <!-- 交易BC → 配送BC（OrderPaidEvent 触发配送） -->
+        <mxCell id="d-rel1" value="OrderPaidEvent&#xa;触发配送调度" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E74C3C;strokeWidth=2;fillColor=#E74C3C;fontSize=10;fontColor=#C0392B;dashed=1;endArrow=block;endFill=1;" edge="1" parent="d1" source="d-bc1-de" target="d-bc2-ar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 配送BC → 定价BC（查询骑手收入定价） -->
+        <mxCell id="d-rel2" value="查询骑手收入定价&#xa;(ACL 防腐层)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#2980B9;strokeWidth=2;fillColor=#2980B9;fontSize=10;fontColor=#1A5276;dashed=1;endArrow=block;endFill=1;" edge="1" parent="d1" source="d-bc2-ds" target="d-bc3-ar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- 定价BC → 结算BC（TaskCompletedEvent 触发结算） -->
+        <mxCell id="d-rel3" value="TaskCompletedEvent&#xa;触发结算生成" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#27AE60;strokeWidth=2;fillColor=#27AE60;fontSize=10;fontColor=#1E8449;dashed=1;endArrow=block;endFill=1;" edge="1" parent="d1" source="d-bc3-de" target="d-bc4-ar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ================================================================ -->
+        <!-- 图例区域                                                          -->
+        <!-- ================================================================ -->
+        <mxCell id="d-legend-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#BDC3C7;strokeWidth=1;arcSize=5;" vertex="1" parent="d1">
+          <mxGeometry x="100" y="865" width="1540" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="d-legend-title" value="DDD 核心概念图例：" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#333;" vertex="1" parent="d1">
+          <mxGeometry x="115" y="870" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg1" value="聚合根 (Aggregate Root)&#xa;业务一致性边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;fontColor=#fff;fontSize=10;arcSize=10;fontStyle=1;" vertex="1" parent="d1">
+          <mxGeometry x="280" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg2" value="实体 (Entity)&#xa;有唯一标识的对象" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD7A0;strokeColor=#F39C12;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="470" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg3" value="值对象 (Value Object)&#xa;无标识、不可变" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#F39C12;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="660" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg4" value="领域服务 (Domain Service)&#xa;跨聚合的业务逻辑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8C471;strokeColor=#F39C12;fontColor=#333;fontSize=10;arcSize=10;" vertex="1" parent="d1">
+          <mxGeometry x="850" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg5" value="领域事件 (Domain Event)&#xa;跨BC异步通信" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFEFE;strokeColor=#E74C3C;fontColor=#C0392B;fontSize=10;arcSize=10;dashed=1;fontStyle=2;" vertex="1" parent="d1">
+          <mxGeometry x="1040" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg6" value="仓储接口 (Repository)&#xa;依赖倒置，隔离持久化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5D8DC;strokeColor=#717D7E;fontColor=#333;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1230" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="d-leg7" value="限界上下文 (BC)&#xa;虚线框 = 业务边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F39C12;fontColor=#E67E22;fontSize=10;arcSize=10;dashed=1;" vertex="1" parent="d1">
+          <mxGeometry x="1420" y="878" width="175" height="50" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+</mxfile>
